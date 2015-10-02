@@ -1,3 +1,6 @@
+# Cool example for HBASE and Algebird on EMR
+
+
 hbase-coprocessor-example
 =================
 This example demonstrates how to implement a group-by aggregation using HBase coprocessor and Algebird monoid. The HBase version we used here is 
