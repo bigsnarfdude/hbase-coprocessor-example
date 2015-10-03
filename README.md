@@ -23,7 +23,7 @@ hbase(main):001:0>
 
 * Create a table named as mobile-device
 ```shell
-create 'mobile-device', { NAME => 'stats', VERSIONS => 1, TTL => 7776000 }
+hbase(main):001:0> create 'mobile-device', { NAME => 'stats', VERSIONS => 1, TTL => 7776000 }
 ``` 
 
 ### Build and deploy the coprocessor demo code
