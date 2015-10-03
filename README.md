@@ -44,8 +44,8 @@ $ cp $PWD/target/scala-2.10/hbase-coprocessor-assembly-1.0.jar $HBASE_DIR/lib/
 ```
 * Restart HBase
 ```shell
-$ $HBASE_HOME/bin/hbase-stop.sh 
-$ $HBASE_HOME/bin/hbase-start.sh
+$ ~/hbase-0.94.18/bin/stop-hbase.sh
+$ ~/hbase-0.94.18/bin/start-hbase.sh
 ```
 
 ### Run tests
