@@ -1,4 +1,4 @@
-# Cool example for HBASE and Algebird on EMR
+#HBASE and Algebird on EMR
 
 
 hbase-coprocessor-example
