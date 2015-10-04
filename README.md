@@ -30,6 +30,22 @@ hbase(main):001:0> create 'mobile-device', { NAME => 'stats', VERSIONS => 1, TTL
 hbase(main):002:0>
 ``` 
 
+* List all keys in table named as mobile-device -- if loaded data correctly
+```shell
+hbase(main):003:0> count 'mobile-device', INTERVAL=> 1
+Current count: 1, row: 1:2014-07-23:Desktop:Linux
+Current count: 2, row: 1:2014-07-23:Desktop:Mac OS X
+Current count: 3, row: 1:2014-07-23:Desktop:Windows
+Current count: 4, row: 1:2014-07-23:Windows Phone:Windows
+Current count: 5, row: 1:2014-07-24:Android Phone:Android
+Current count: 6, row: 1:2014-07-24:Apple iPhone:iOS
+Current count: 7, row: 1:2014-07-24:Desktop:Mac OS X
+Current count: 8, row: 1:2014-07-24:Desktop:Windows
+Current count: 9, row: 1:2014-07-24:Windows Phone:Windows
+Current count: 10, row: 2:2014-07-24:Desktop:Chrome OS
+10 row(s) in 0.0940 seconds
+```
+
 ### Build and deploy the coprocessor demo code
 * Compile a fat jar, and copy it to HBase classpath
 ```shell
