@@ -59,7 +59,7 @@ class CoprocessorClient(val hConf: Configuration) {
     try {
       // get connection and get table
       hTable = new HTable(hConf, query.table)
-      println("calling coprocessor")
+      println("calling coprocessor CoprocessorClient")
       hTable.coprocessorExec(classOf[GroupByMonoidSumProtocol], null, null, call, callback)
     } finally {
       if (hTable != null) {

@@ -44,9 +44,13 @@ object testEnvironment {
     KryoPool.withByteArrayOutputStream(1, inst)
   }
 
+  // this section loads a csv of test data and puts it batch into running HBASE 
   lazy val setUpTestEnv = {
+
+    // sets up records parser into MobileDeviceRecord case class found in HBaseTable.scala
     def newRecordFromLine(line: String) = {
       val parts = line.split("\t")
+      // splits on tab-delimited
       new MobileDeviceRecord(parts(1), parts(0), parts(2), parts(3), parts(4).toLong, parts(5))
     }
 
@@ -61,6 +65,7 @@ object testEnvironment {
     }).toList
 
     try {
+      // loads ba
       htable.batch(puts)
     } catch {
       case e: Exception ⇒ sys.error("Error: " + e)
@@ -90,15 +95,15 @@ class HBaseCoprocessSpec extends Specification {
     }
   }
 
-  "setUpVideoReportTest" should {
-    "group on device and aggregate uniques correctly" in {
-      val query = GroupByQuery("mobile-device", "1", None, None, List("device"), List("uniques"))
-      val groupBySumClient = new CoprocessorClient(testEnv.conf)
-      val results = groupBySumClient.groupBySum(query)
-      results("Apple iPhone")("uniques").asInstanceOf[HLL].estimatedSize === 198.0
-      results("Android Phone")("uniques").asInstanceOf[HLL].estimatedSize === 10.0
-      results("Desktop")("uniques").asInstanceOf[HLL].estimatedSize === 10.0
-      results("Windows Phone")("uniques").asInstanceOf[HLL].estimatedSize === 2.0
-    }
-  }
+  //"setUpVideoReportTest" should {
+  //  "group on device and aggregate uniques correctly" in {
+  //    val query = GroupByQuery("mobile-device", "1", None, None, List("device"), List("uniques"))
+  //    val groupBySumClient = new CoprocessorClient(testEnv.conf)
+  //   val results = groupBySumClient.groupBySum(query)
+  //    results("Apple iPhone")("uniques").asInstanceOf[HLL].estimatedSize === 198.0
+  //    results("Android Phone")("uniques").asInstanceOf[HLL].estimatedSize === 10.0
+  //    results("Desktop")("uniques").asInstanceOf[HLL].estimatedSize === 10.0
+  //    results("Windows Phone")("uniques").asInstanceOf[HLL].estimatedSize === 2.0
+  //  }
+  //}
 }

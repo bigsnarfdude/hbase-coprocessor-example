@@ -83,8 +83,9 @@ case class GroupByMonoidSumCallback() extends Batch.Callback[JMap[String, JMap[S
   private val aggregator = new JMap[String, JMap[String, Any]]
 
   override def update(region: Array[Byte], row: Array[Byte], nextResult: JMap[String, JMap[String, Any]]): Unit = {
-    println("start final aggregation")
+    println("start final aggregation GroupByMonoidSumCallback")
     for ((nxtKey, nxtColVals) ← nextResult) {
+      println((nxtKey, nxtColVals))
       if (aggregator.containsKey(nxtKey)) {
         val aggColVals = aggregator.get(nxtKey)
         for ((c, v) ← nxtColVals)
@@ -93,7 +94,7 @@ case class GroupByMonoidSumCallback() extends Batch.Callback[JMap[String, JMap[S
         aggregator.put(nxtKey, nxtColVals)
       }
     }
-    println("finish final aggregation")
+    println("finish final aggregation GroupByMonoidSumCallback")
   }
 
   def result: JMap[String, JMap[String, Any]] = aggregator
