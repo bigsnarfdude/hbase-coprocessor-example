@@ -26,7 +26,7 @@ hbase(main):001:0>
 * Create a table named as mobile-device
 ```shell
 hbase(main):001:0> create 'mobile-device', { NAME => 'stats', VERSIONS => 1, TTL => 7776000 }
-0 row(s) in.4990 seconds
+0 row(s) in 1.4990 seconds
 
 hbase(main):002:0>
 ``` 
