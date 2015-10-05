@@ -15,7 +15,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= Seq(
-  "org.apache.hbase" % "hbase" % "0.94.26" % "provided",
+  "org.apache.hbase" % "hbase" % "0.94.27" % "provided",
   "org.apache.hadoop" % "hadoop-core" % "1.0.4" % "provided",
   "com.twitter" %% "algebird-core" % "0.7.0",
   "com.twitter" %% "chill" % "0.4.2",
