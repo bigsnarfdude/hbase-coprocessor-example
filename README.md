@@ -1,5 +1,6 @@
 #HBASE and Algebird on EMR
 
+<img src="https://bigsnarf.files.wordpress.com/2015/10/screen-shot-2015-10-04-at-5-42-19-pm.png" alt="fucking hot">
 
 hbase-coprocessor-example
 =================
