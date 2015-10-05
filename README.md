@@ -5,11 +5,11 @@
 hbase-coprocessor-example
 =================
 This example demonstrates how to implement a group-by aggregation using HBase coprocessor and Algebird monoid. The HBase version we used here is 
-0.94.18, which is exactly the same one available on AWS EMR.
+0.94.27, which is exactly the same one available on AWS EMR.
 Blog Post at: http://devblog.mediamath.com/cut-your-run-time-with-hbase-and-algebird
 
 ### Create a demo table in your local HBase application
-* Download and unzip hbase 0.94.18
+* Download and unzip hbase 0.94.27
 
 * Start hbase ```bin/start-hbase.sh``` 
 
@@ -26,7 +26,7 @@ hbase(main):001:0>
 * Create a table named as mobile-device
 ```shell
 hbase(main):001:0> create 'mobile-device', { NAME => 'stats', VERSIONS => 1, TTL => 7776000 }
-0 row(s) in 6.4990 seconds
+0 row(s) in.4990 seconds
 
 hbase(main):002:0>
 ``` 
@@ -62,8 +62,8 @@ $ cp $PWD/target/scala-2.10/hbase-coprocessor-assembly-1.0.jar $HBASE_DIR/lib/
 ```
 * Restart HBase
 ```shell
-$ ~/hbase-0.94.18/bin/stop-hbase.sh
-$ ~/hbase-0.94.18/bin/start-hbase.sh
+$ ~/hbase-0.94.27/bin/stop-hbase.sh
+$ ~/hbase-0.94.27/bin/start-hbase.sh
 ```
 
 ### Load Data
