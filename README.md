@@ -5,8 +5,11 @@
 hbase-coprocessor-example
 =================
 This example demonstrates how to implement a group-by aggregation using HBase coprocessor and Algebird monoid. The HBase version we used here is 
-0.94.27, which is exactly the same one available on AWS EMR.
-Blog Post at: http://devblog.mediamath.com/cut-your-run-time-with-hbase-and-algebird
+0.94.27.  
+
+If you wanna use AWS EMR use HBase 0.94.18 http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-hbase-versions.html.
+
+Original Blog Post project at: http://devblog.mediamath.com/cut-your-run-time-with-hbase-and-algebird
 
 ### Create a demo table in your local HBase application
 * Download and unzip hbase 0.94.27
