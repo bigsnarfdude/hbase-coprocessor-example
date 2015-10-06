@@ -1,12 +1,14 @@
-import AssemblyKeys._ // put this at the top of the file
+lazy val commonSettings = Seq(
+  version := "1.0",
+  organization := "com.example",
+  scalaVersion := "2.10.4"
+)
 
-assemblySettings
-
-name := "hbase-coprocessor"
-
-version := "1.0"
-
-scalaVersion := "2.10.4"
+lazy val app = (project in file("app")).
+  settings(commonSettings: _*).
+  settings(
+    // your settings here
+  )
 
 resolvers ++= Seq(
   "Central Maven Repo" at "http://repo.maven.apache.org/maven2",
