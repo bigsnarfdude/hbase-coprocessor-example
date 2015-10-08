@@ -94,4 +94,34 @@ val puts = lines.map(line ⇒ {
 ### Run tests
 ```shell 
 $ sbt test
+[info] Loading project definition from /hbase-coprocessor-example/project
+[info] Set current project to hbase-coprocessor-example (in build file:/hbase-coprocessor-example/)
+15/10/07 21:16:16 INFO zookeeper.RecoverableZooKeeper: The identifier of this process is 598@A.local
+
+...
+
+15/10/07 21:16:18 INFO zookeeper.ClientCnxn: Session establishment complete on server localhost/127.0.0.1:2181, sessionid = 0x15045a6cd760006, negotiated timeout = 40000
+calling coprocessor CoprocessorClient
+start final aggregation GroupByMonoidSumCallback
+(Windows Phone,{impressions=2})
+(Android Phone,{impressions=17})
+(Apple iPhone,{impressions=201})
+(Desktop,{impressions=13})
+finish final aggregation GroupByMonoidSumCallback
+15/10/07 21:16:18 INFO client.HConnectionManager$HConnectionImplementation: Closed zookeeper sessionid=0x15045a6cd760006
+15/10/07 21:16:18 INFO zookeeper.ZooKeeper: Session: 0x15045a6cd760006 closed
+15/10/07 21:16:18 INFO zookeeper.ClientCnxn: EventThread shut down
+15/10/07 21:16:19 INFO client.HConnectionManager$HConnectionImplementation: Closed zookeeper sessionid=0x15045a6cd760005
+15/10/07 21:16:19 INFO zookeeper.ZooKeeper: Session: 0x15045a6cd760005 closed
+15/10/07 21:16:19 INFO zookeeper.ClientCnxn: EventThread shut down
+[info] HBaseCoprocessSpec
+[info]
+[info] setUpVideoReportTest should
+[info] + group on device and aggregate impressions correctly
+[info]
+[info] Total for specification HBaseCoprocessSpec
+[info] Finished in 2 seconds, 940 ms
+[info] 1 example, 0 failure, 0 error
+[info] Passed: Total 1, Failed 0, Errors 0, Passed 1
+[success] Total time: 7 s, completed 7-Oct-2015 9:16:19 PM
 ```
