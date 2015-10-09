@@ -1,4 +1,6 @@
-#HBASE and Algebird on EMR *This class is not thread safe for reads nor write.*
+#HBASE and Algebird on EMR 
+
+### *This class is not thread safe for reads nor write.*
 
 
 
@@ -6,6 +8,8 @@
 
 hbase-coprocessor-example
 =================
+https://hbase.apache.org/0.94/apidocs/org/apache/hadoop/hbase/client/HTable.html
+
 This example demonstrates how to implement a group-by aggregation using HBase coprocessor and Algebird monoid. The HBase version we used here is 
 0.94.27.  
 
