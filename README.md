@@ -13,6 +13,8 @@ https://hbase.apache.org/0.94/apidocs/org/apache/hadoop/hbase/client/HTable.html
 This example demonstrates how to implement a group-by aggregation using HBase coprocessor and Algebird monoid. The HBase version we used here is 
 0.94.27.  
 
+Algebird Core "com.twitter" %% "algebird-core" % "0.10.0"
+
 If you wanna use AWS EMR use HBase 0.94.18 http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/emr-hbase-versions.html.
 
 Original Blog Post project at: http://devblog.mediamath.com/cut-your-run-time-with-hbase-and-algebird
